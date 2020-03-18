@@ -25,6 +25,7 @@ const App = () => {
           </a>{' '}
             API</p>
           <p>Modified by: Tan Nguyen LE</p>
+          <p>For <strong>NashTech</strong> - một thời trai trẻ 💖</p>
         </footer>
     </>
   );
