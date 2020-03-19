@@ -2,7 +2,8 @@
 
 This repository contains simple data monitoring for Covid-19 using React.js
 
-- [Demo](https://nt-ncovid.netlify.com/)
+- [Demo 1](https://nt-ncovid.netlify.com/)
+- [Demo 2](https://nguyenletan.github.io/ncovid19/)
 
 **Feature Include**
 
