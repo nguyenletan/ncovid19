@@ -20,3 +20,37 @@ export const formatDate = (dateString: Date) => {
     .toString()
     .padStart(2, '0')}`;
 };
+
+export interface ITimeSeriesConfirmed {
+  id: string;
+  value: number;
+}
+
+export const csvJSON = (csv: string):ITimeSeriesConfirmed[] => {
+  let lines = csv.split("\n");
+  let result: ITimeSeriesConfirmed[] = [];
+
+  let headers = lines[0].split(",");
+
+  for (let i = 1; i < lines.length; i++) {
+    let obj: ITimeSeriesConfirmed = {id: '', value: 0};
+    let currentLine = lines[i].split(",");
+
+    for (let j = 0; j < headers.length; j++) {
+      if (headers[j] === "Country/Region") {
+        obj.id = currentLine[j];
+      } else if (j === headers.length - 1) {
+        obj.value = Number(currentLine[j]);
+      }
+    }
+    const existingCountry = result.find(item => item.id === obj.id);
+    if(existingCountry) {
+      existingCountry.value += obj.value;
+    } else {
+      result.push(obj);
+    }
+  }
+
+  return result; //JavaScript object
+  // return JSON.stringify(result); //JSON
+};

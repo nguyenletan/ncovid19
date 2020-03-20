@@ -2,30 +2,28 @@
   "name": "ncovid-19",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://nguyenletan.github.io/ncovid19",
   "dependencies": {
+    "@nivo/geo": "^0.61.1",
     "@testing-library/jest-dom": "^5.1.1",
     "@testing-library/react": "^10.0.1",
     "@testing-library/user-event": "^10.0.0",
     "@types/jest": "^25.1.4",
-    "@types/node": "^13.9.2",
+    "@types/node": "13.9.2",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
-    "axios": "^0.19.2",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-flags-select": "^1.1.12",
+    "axios": "0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-flags-select": "1.1.12",
     "react-scripts": "3.4.0",
-    "styled-components": "^5.0.1",
-    "typescript": "~3.8.3"
+    "styled-components": "5.0.1",
+    "typescript": "3.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,7 +42,6 @@
   },
   "devDependencies": {
     "@types/react-flags-select": "^1.1.2",
-    "@types/styled-components": "^5.0.1",
-    "gh-pages": "^2.2.0"
+    "@types/styled-components": "^5.0.1"
   }
 }
