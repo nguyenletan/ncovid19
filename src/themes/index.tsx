@@ -28,7 +28,7 @@ export const darkTheme: DefaultTheme = {
     backgroundLight: '#222429',
     text: '#e0e4e4',
     textLight: '#e0e4e4',
-    borderColor: '#5c6069',
+    borderColor: '#e8e9ed',
     ...shareColor,
   },
 };

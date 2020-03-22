@@ -1,7 +1,7 @@
 type ValueAndDetail = {
   value: number;
   detail: string;
-};
+}
 
 export interface StringMap {
   [key: string]: string;
@@ -19,11 +19,20 @@ export interface IStatsResponse {
   lastUpdate: Date;
 }
 
+export interface IWorldTableResponse {
+  id: number,
+  country_name: string,
+  confirmed_cases: string,
+  cases_per_1_million_people: string,
+  recovered: string,
+  deaths: string
+}
+
 export type UseDataApiArgs = {
   initUrl: string;
   defaultData?: any;
   bodyData?: object | any[];
-};
+}
 
 export type UseDataApiResponse<T> = [
   {
@@ -32,4 +41,4 @@ export type UseDataApiResponse<T> = [
     data?: T | undefined;
   },
   // Dispatch<string>,
-];
+]
