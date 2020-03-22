@@ -14,9 +14,9 @@ const App = () => {
       <main className="container">
         <Hero/>
         <CountryPicker/>
+        <Stats title="Global Case" url={API_ENDPOINT}/>
         <WorldTable title="Global Table" url={JSON_ENDPOINT}/>
         <Maps title="Global Maps" url={API_ENDPOINT_FOR_MAPS}/>
-        <Stats title="Global Case" url={API_ENDPOINT}/>
       </main>
       <footer>
         <p>Forked From: github.com:alankilalank/react-covid-19.git</p>

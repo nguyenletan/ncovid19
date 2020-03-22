@@ -1580,10 +1580,18 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.9.23":
+"@types/react@*":
   version "16.9.23"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.23.tgz#1a66c6d468ba11a8943ad958a8cb3e737568271c"
   integrity sha512-SsGVT4E7L2wLN3tPYLiF20hmZTPGuzaayVunfgXzUn1x4uHVsKH6QDJQ/TdpHqwsTLd4CwrmQ2vOgxN7gE24gw==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@^16.9.25":
+  version "16.9.25"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.25.tgz#6ae2159b40138c792058a23c3c04fd3db49e929e"
+  integrity sha512-Dlj2V72cfYLPNscIG3/SMUOzhzj7GK3bpSrfefwt2YT9GLynvLCCZjbhyF6VsT0q0+aRACRX03TDJGb7cA0cqg==
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -8884,11 +8892,6 @@ react-motion@^0.5.2:
     performance-now "^0.2.0"
     prop-types "^15.5.8"
     raf "^3.1.0"
-
-react-responsive-cards-table@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/react-responsive-cards-table/-/react-responsive-cards-table-0.3.0.tgz#f60093e8cc47ca8742b5f8b8c89c0c6b05c29f42"
-  integrity sha512-4DpmW56gtcQCWRS/aw4t+lSvkt3UDBVRsdTHCUu6JtjdecgR/swfqvKL+CCx2kyKakoqjWib2QrzUomWmhk+uA==
 
 react-scripts@3.4.0:
   version "3.4.0"
