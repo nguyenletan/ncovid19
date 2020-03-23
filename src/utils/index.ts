@@ -1,3 +1,5 @@
+import {ITimeSeriesConfirmed, IWorldResponse} from "../types";
+
 export const formatNumber = (num: number) =>
   num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 
@@ -21,10 +23,16 @@ export const formatDate = (dateString: Date) => {
     .padStart(2, '0')}`;
 };
 
-export interface ITimeSeriesConfirmed {
-  id: string;
-  value: number;
-}
+export const covertToMapsData = (data: IWorldResponse[]):ITimeSeriesConfirmed[] => {
+  return data.map(item => {
+    const confirmedCases = item.confirmed_cases.replace(',', '');
+    const result: ITimeSeriesConfirmed = {
+      id: item.country_name,
+      value: confirmedCases as unknown as number
+    };
+    return result;
+  });
+};
 
 export const csvJSON = (csv: string):ITimeSeriesConfirmed[] => {
   let lines = csv.split("\n");

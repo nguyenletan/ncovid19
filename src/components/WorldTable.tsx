@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import useDataApi from '../hooks/useDataApi';
 import {mediaQuery} from '../themes';
-import {IWorldTableResponse} from '../types';
+import {IWorldResponse} from '../types';
 import Error from './Error';
 import Loading from "./Loading";
 import Row from './Row';
@@ -62,7 +62,7 @@ interface IWorldTableProps {
 }
 
 interface IWordTableBodyProps {
-  data: IWorldTableResponse[];
+  data: IWorldResponse[];
 }
 
 // @ts-ignore
@@ -86,7 +86,7 @@ const WordTableBody: React.FC<IWordTableBodyProps> = ({data}) => {
 };
 
 const WorldTable: React.FC<IWorldTableProps> = ({url, title}) => {
-  const [{data, isLoading, isError}] = useDataApi<IWorldTableResponse[]>({
+  const [{data, isLoading, isError}] = useDataApi<IWorldResponse[]>({
     initUrl: url,
     defaultData: {},
   });

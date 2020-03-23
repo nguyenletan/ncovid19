@@ -3,7 +3,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 import useDataApi from '../hooks/useDataApi';
 import {mediaQuery} from '../themes';
-import {csvJSON, ITimeSeriesConfirmed} from '../utils';
+import {ITimeSeriesConfirmed, IWorldResponse} from "../types";
+import {covertToMapsData} from '../utils';
 import countries from '../world_countries.js';
 import Error from './Error';
 import Loading from "./Loading";
@@ -39,13 +40,8 @@ interface MapsProps {
   title?: string;
 }
 
-interface IMapsData {
-  id: string;
-  value: number;
-}
-
 const Maps: React.FC<MapsProps> = ({url, title}) => {
-  const [{data, isLoading, isError}] = useDataApi<any>({
+  const [{data, isLoading, isError}] = useDataApi<IWorldResponse[]>({
     initUrl: url,
     defaultData: {},
   });
@@ -54,8 +50,8 @@ const Maps: React.FC<MapsProps> = ({url, title}) => {
   }
 
   let timeSeriesConfirmed: ITimeSeriesConfirmed[] = [];
-  if (data !== undefined && typeof data === 'string') {
-    timeSeriesConfirmed = csvJSON(data);
+  if (data && data.length !== undefined && data.length > 0) {
+    timeSeriesConfirmed = covertToMapsData(data);
   }
   return (
     <StatSection className="center-text">

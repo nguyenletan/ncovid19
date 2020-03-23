@@ -19,7 +19,12 @@ export interface IStatsResponse {
   lastUpdate: Date;
 }
 
-export interface IWorldTableResponse {
+export interface ITimeSeriesConfirmed {
+  id: string;
+  value: number;
+}
+
+export interface IWorldResponse {
   id: number,
   country_name: string,
   confirmed_cases: string,

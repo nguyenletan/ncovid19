@@ -6,7 +6,6 @@ import Stats from './Stats';
 import WorldTable from './WorldTable';
 
 const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT as string;
-const API_ENDPOINT_FOR_MAPS = process.env.REACT_APP_API_FOR_MAPS as string;
 const JSON_ENDPOINT = process.env.REACT_APP_JSON_ENDPOINT as string;
 const App = () => {
   return (
@@ -14,9 +13,9 @@ const App = () => {
       <main className="container">
         <Hero/>
         <CountryPicker/>
-        <Stats title="Global Case" url={API_ENDPOINT}/>
+        <Maps title="Global Maps" url={JSON_ENDPOINT}/>
         <WorldTable title="Global Table" url={JSON_ENDPOINT}/>
-        <Maps title="Global Maps" url={API_ENDPOINT_FOR_MAPS}/>
+        <Stats title="Global Case" url={API_ENDPOINT}/>
       </main>
       <footer>
         <p>Forked From: github.com:alankilalank/react-covid-19.git</p>
