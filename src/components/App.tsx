@@ -12,7 +12,7 @@ const App = () => {
     <>
       <main className="container">
         <Hero/>
-        <CountryPicker/>
+        {/*<CountryPicker/>*/}
         <Maps title="Global Maps" url={JSON_ENDPOINT}/>
         <WorldTable title="Global Table" url={JSON_ENDPOINT}/>
         <Stats title="Global Case" url={API_ENDPOINT}/>
