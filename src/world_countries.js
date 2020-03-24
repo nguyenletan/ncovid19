@@ -45044,7 +45044,7 @@ const worldCountries = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Korea"
+        "name": "South Korea"
       },
       "geometry": {
         "type": "Polygon",
