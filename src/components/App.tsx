@@ -1,5 +1,5 @@
 import * as React from 'react';
-import CountryPicker from './CountryPicker';
+/*import CountryPicker from './CountryPicker';*/
 import Hero from './Hero';
 import Maps from './Maps';
 import Stats from './Stats';
