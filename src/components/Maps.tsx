@@ -69,7 +69,7 @@ const Maps: React.FC<MapsProps> = ({url, title}) => {
               data={timeSeriesConfirmed}
               features={countries.features}
               colors="reds"
-              domain={[0, 85000]}
+              domain={[0, 100000]}
               unknownColor="#ffffff"
               label="properties.name"
               projectionTranslation={[0.5, 0.5]}

@@ -1,5 +1,4 @@
 import * as React from 'react';
-/*import CountryPicker from './CountryPicker';*/
 import Hero from './Hero';
 import Maps from './Maps';
 import Stats from './Stats';
@@ -12,7 +11,6 @@ const App = () => {
     <>
       <main className="container">
         <Hero/>
-        {/*<CountryPicker/>*/}
         <Maps title="Global Maps" url={JSON_ENDPOINT}/>
         <WorldTable title="Global Table" url={JSON_ENDPOINT}/>
         <Stats title="Global Case" url={API_ENDPOINT}/>
